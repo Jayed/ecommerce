@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce-project</title>
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- My css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JS starts here -->
+    <!-- <script src="index.js"></script> -->
+    <!-- nav ends here -->
+</head>
+
+<body class="background-color">
+    <!-- nav starts here -->
+    <i class="fas fa-bars fa-2x" id="menu-icon"></i>
+    <nav id="menu" class="hidden">
+        <ul class="nav-upper flex-space-around">
+            <li class="nav-list">
+                <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-list">
+                <a href="register.html" class="nav-link">Register</a>
+            </li>
+            <li class="nav-list">
+                <a href="login.html" class="nav-link">Login</a>
+            </li>
+            <li class="nav-list">
+                <a href="index.html" class="nav-link">Logout</a>
+            </li>
+            <li class="nav-list">
+                <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-list">
+                <a href="index.html" class="nav-link"></a>
+                <img src="./images/profile-picture.png" class="profile-icon" alt="profile">
+            </li>
+        </ul>
+
+        <ul class="nav-lower flex-space-around">
+            <li class="nav-list">
+                <a href="index.html" class="nav-link nav_brand">Jayed Express</a>
+            </li>
+            <li class="nav-list">
+                <a href="cart.html" class="nav-link">
+                    <span>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Cart 2 Products - $124.40
+                        </fa>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- nav ends here -->
+
+    <!-- Script starts here -->
+    <script>
+        const menuIcon = document.getElementById("menu-icon");
+
+        const navMenu = document.getElementById("menu");
+
+        menuIcon.addEventListener("click", displayMenu);
+
+        function displayMenu() {
+            if (navMenu.className === "hidden") {
+                navMenu.classList.remove("hidden");
+            }
+            else {
+                navMenu.classList.add("hidden");
+            }
+        }
+    </script>
+    <!-- Script ends here -->
+    <main class="flex-center">
+        <div class="main-content ">
+            <section class="product-details flex-center">
+                <div class="product-details-left flex-center">
+                    <img src="./images/product-2.jpg" alt="product-2">
+                </div>
+                <div class="product-details-right">
+                    <h3 class="product-name">Name of the product-1</h3>
+                            <p>
+                                <span class="dot green"></span>
+                                <span class="dot black"></span>
+                                <span class="dot red"></span>
+                            </p>
+                            <p class="product-description">
+                                <strong>Product Description:</strong><br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sed dicta voluptates, sequi molestias nam esse, a fuga, necessitatibus veniam ea explicabo velit unde mollitia blanditiis laboriosam provident labore nisi! Rerum enim vel id voluptates.
+                            </p>
+                            <p class="product-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sed dicta voluptates, sequi molestias nam esse, a fuga, necessitatibus veniam ea explicabo velit unde mollitia blanditiis laboriosam provident labore nisi! Rerum enim vel id voluptates.
+                            </p>
+                            <h4 class="product-category">Categories: Tablet</h4>
+                            <h4 class="product-price">$299.50</h4>
+                            <p class="product-rating">Rating:4.5/5</p>
+                            <button class="btn product-button">Add to Cart</button>
+                            <button class="btn product-button">Back To Shopping</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer starts here -->
+    <footer class="footer flex-space-around">
+        <div class=" footer flex-space-around">
+            <label for="subscribe">Subscribe to Newsletter:</label>
+            <input 
+                type="email"
+                id="subscribe"
+                name="subscribe"
+                class="footer-input"
+                placeholder="Your Email Address"
+            />
+            <button class="btn btn-subscribe">
+                Subscribe
+            </button>
+        </div>
+
+        <div>
+            <p>
+                &copy; Copyright 2023 Jayed Express. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <!-- Footer ends here -->
+
+</body>
+
+</html>

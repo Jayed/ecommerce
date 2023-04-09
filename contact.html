@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce-project</title>
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- My css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JS starts here -->
+    <!-- <script src="index.js"></script> -->
+    <!-- nav ends here -->
+</head>
+
+<body>
+    <!-- nav starts here -->
+    <i class="fas fa-bars fa-2x" id="menu-icon"></i>
+    <nav id="menu" class="hidden">
+        <ul class="nav-upper flex-space-around">
+            <li class="nav-list">
+                <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-list">
+                <a href="register.html" class="nav-link">Register</a>
+            </li>
+            <li class="nav-list">
+                <a href="login.html" class="nav-link">Login</a>
+            </li>
+            <li class="nav-list">
+                <a href="index.html" class="nav-link">Logout</a>
+            </li>
+            <li class="nav-list">
+                <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-list">
+                <a href="index.html" class="nav-link"></a>
+                <img src="./images/profile-picture.png" class="profile-icon" alt="profile">
+            </li>
+        </ul>
+
+        <ul class="nav-lower flex-space-around">
+            <li class="nav-list">
+                <a href="index.html" class="nav-link nav_brand">Jayed Express</a>
+            </li>
+            <li class="nav-list">
+                <a href="cart.html" class="nav-link">
+                    <span>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Cart 2 Products - $124.40
+                        </fa>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- nav ends here -->
+
+    <!-- Script starts here -->
+    <script>
+        const menuIcon = document.getElementById("menu-icon");
+
+        const navMenu = document.getElementById("menu");
+
+        menuIcon.addEventListener("click", displayMenu);
+
+        function displayMenu() {
+            if (navMenu.className === "hidden") {
+                navMenu.classList.remove("hidden");
+            }
+            else {
+                navMenu.classList.add("hidden");
+            }
+        }
+    </script>
+    <!-- Script ends here -->
+    <main>
+        <section class="contact-section">
+            <h2 class="section-title text-center">
+                Contact Us
+            </h2>
+            <div class="contact-container flex-center">
+                <form action="" class="form cart">
+                    <div class="form-control flex-center">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required autocomplete="name">
+                    </div>
+                    <div class="form-control flex-center">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required autocomplete="email">
+                    </div>
+                    <div class="form-control flex-center">
+                        <label for="message">Message</label>
+                        <textarea name="aobut" id="about"></textarea>
+                    </div>
+                    <div class="form-control flex-center form-btn-field">
+                        <button type="submit" class="btn contact-btn">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+                <div class="contact-address flex-space-around">
+                    <address>
+                        <h4>Address:</h4>
+                        <p>123 road, bijoy nagor, dhaka, bangladesh.</p>
+                        <br>
+                        <span>Call: </span>
+                        <a href="Tel:+45495748934798">3489589437843547</a>
+                    </address>
+                    <iframe class="contact-map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14604.926642982458!2d90.36574214999999!3d23.774763599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8f3f608843b%3A0xf2c71ff392721324!2sLiberation%20War%20Museum!5e0!3m2!1sen!2sbd!4v1680600893026!5m2!1sen!2sbd"
+                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer starts here -->
+    <footer class="footer flex-space-around">
+        <div class=" footer flex-space-around">
+            <label for="subscribe">Subscribe to Newsletter:</label>
+            <input type="email" id="subscribe" name="subscribe" class="footer-input" placeholder="Your Email Address" />
+            <button class="btn btn-subscribe">
+                Subscribe
+            </button>
+        </div>
+
+        <div>
+            <p>
+                &copy; Copyright 2023 Jayed Express. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <!-- Footer ends here -->
+
+</body>
+
+</html>

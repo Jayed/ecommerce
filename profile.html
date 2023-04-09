@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce-project</title>
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- My css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JS starts here -->
+    <!-- <script src="index.js"></script> -->
+    <!-- nav ends here -->
+</head>
+
+<body>
+    <!-- nav starts here -->
+    <i class="fas fa-bars fa-2x" id="menu-icon"></i>
+    <nav id="menu" class="hidden">
+        <ul class="nav-upper flex-space-around">
+            <li class="nav-list">
+                <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-list">
+                <a href="register.html" class="nav-link">Register</a>
+            </li>
+            <li class="nav-list">
+                <a href="login.html" class="nav-link">Login</a>
+            </li>
+            <li class="nav-list">
+                <a href="index.html" class="nav-link">Logout</a>
+            </li>
+            <li class="nav-list">
+                <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-list">
+                <a href="index.html" class="nav-link"></a>
+                <img src="./images/profile-picture.png" class="profile-icon" alt="profile">
+            </li>
+        </ul>
+
+        <ul class="nav-lower flex-space-around">
+            <li class="nav-list">
+                <a href="index.html" class="nav-link nav_brand">Jayed Express</a>
+            </li>
+            <li class="nav-list">
+                <a href="cart.html" class="nav-link">
+                    <span>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Cart 2 Products - $124.40
+                        </fa>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- nav ends here -->
+
+    <!-- Script starts here -->
+    <script>
+        const menuIcon = document.getElementById("menu-icon");
+
+        const navMenu = document.getElementById("menu");
+
+        menuIcon.addEventListener("click", displayMenu);
+
+        function displayMenu() {
+            if (navMenu.className === "hidden") {
+                navMenu.classList.remove("hidden");
+            }
+            else {
+                navMenu.classList.add("hidden");
+            }
+        }
+    </script>
+    <!-- Script ends here -->
+    <main>
+        <section class="profile flex-center">
+            <h2 class="section-title text-center">
+                User Profile
+            </h2>
+            <div class="cart flex-center">
+                <img src="./images/profile-picture.png" class="profile-img" alt="profile">
+                <h3 class="profile-name">Jayed Hossain</h3>
+                <h5 class="profile-email">jayed.hossain@doict.gov.bd</h5>
+                <h5 class="profile-about">I love to control shopping different gadget items.</h5>
+                <div class="profile-buttons">
+                    <button class="btn profile-edit-btn">
+                        <i class="far fa-edit fa-2x"></i>
+                    </button>
+                    <button class="btn profile-edit-btn">
+                        <i class="far fa-edit fa-2x"></i>
+                    </button>
+                    <button class="btn profile-trash-btn">
+                        <i class="fa fa-trash fa-2x"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer starts here -->
+    <footer class="footer flex-space-around">
+        <div class=" footer flex-space-around">
+            <label for="subscribe">Subscribe to Newsletter:</label>
+            <input type="email" id="subscribe" name="subscribe" class="footer-input" placeholder="Your Email Address" />
+            <button class="btn btn-subscribe">
+                Subscribe
+            </button>
+        </div>
+
+        <div>
+            <p>
+                &copy; Copyright 2023 Jayed Express. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <!-- Footer ends here -->
+
+</body>
+
+</html>
